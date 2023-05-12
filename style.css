@@ -6,45 +6,66 @@
 
 body{
     font-family: sans-serif;
+    background-color: rgb(24, 24, 24);
 }
 
 i,svg{
     pointer-events: none;
 }
-
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 3rem;
+    letter-spacing: 1.2rem;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+}
+h2{
+    color: white;
+}
+.logo{
+    width: 20%;
+}
 .kick-pad, .snare-pad, .hihat-pad{
-    width: 5rem;
+    width: 4rem;
     height: 5rem;
     margin: 1rem 0.5rem;
     cursor: pointer;
-    border-radius: 50%;
 }
 
 .kick-pad{
-background-color: rgb(115, 225, 233);
+    background: rgb(78, 78, 224);
+    background: linear-gradient(90deg, rgb(98, 98, 233) 0%, rgb(135, 215, 231) 100%);
 }
 
 .snare-pad{
- background-color: rgb(193, 226, 103);
+    background: rgb(100, 241, 243);
+    background: linear-gradient(90deg, rgb(100, 241, 243) 0%, rgb(243, 212, 144) 100%);
 }
 
 .hihat-pad{   
-background-color: rgb(230, 117, 201);
+    background: rgb(132, 151, 247);
+background: linear-gradient(90deg, rgb(132, 151, 247) 0%, rgb(243, 129, 152) 100%);
 
 }
 
 .kick-pad.active{
-    
-background-color: rgb(54, 223, 235);
+    background: rgb(9,9,121);
+    background: linear-gradient(90deg, rgb(4, 4, 252) 0%, rgba(0,212,255,1) 100%);
 }
 
 .snare-pad.active{
-    background-color: rgb(187, 235, 54);
+    background: rgb(34,193,195);
+    background: linear-gradient(90deg, rgb(2, 246, 250) 0%, rgb(252, 172, 0) 100%);
 }
 
 .hihat-pad.active{
-    
-background-color: rgb(243, 65, 199);
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgb(32, 69, 250) 0%, rgb(255, 32, 77) 100%);
 }
 .sequencer{
     display: flex;
@@ -52,6 +73,7 @@ background-color: rgb(243, 65, 199);
     flex-direction: column;
     align-items: center;
     justify-content: center;
+;
 
 }
 .hihat-track, .snare-track, .kick-track{
@@ -77,8 +99,8 @@ background-color: rgb(243, 65, 199);
 .controls button{
     padding: 1rem;
     border: none;
-    background: rgb(160, 160, 160);
-    color: white;
+    background: white;
+    color: rgb(24, 24, 24);
     font-size: 1rem;
     cursor: pointer;
     border-radius: 50%;
@@ -92,19 +114,27 @@ background-color: rgb(243, 65, 199);
 .play{
     padding: 1rem 2rem;
     border: none;
-    background: rgb(68, 68, 68);
-    color: white;
+    background: white;
+    color: rgb(24, 24, 24);
     font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.5s ease;
-    margin-top: 4rem;
+    margin-top: 3rem;
     border-radius: 50px;
 }
 .play:hover{
     
-    background: rgb(20, 20, 20);
+    background: rgb(139, 139, 139);
 }
 select{
     padding: 1rem;
     font-size: 1rem;
+}
+
+@keyframes playTrack{
+    from {
+        transform: scale(1);
+    }to{
+        transform: scale(1.2);
+    }
 }

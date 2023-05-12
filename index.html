@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
     <title>BeatMaker</title>
 </head>
 <body>
 
     <div class="sequencer">
+    <header>
+        <img src="./logo.png" alt="logo" class="logo">
+        <h1><b>BEAT</b>MAKER</h1>
+    </header>
         <div class="kick-track">
             <div class="controls">
-                <h1>Kick</h1>
+                <h2>Kick</h2>
                 <button data-track="0" class="mute kick-volume">
                     <i class="fa-solid fa-volume-xmark"></i>
                 </button>
@@ -36,7 +44,7 @@
 
         <div class="snare-track">
             <div class="controls">
-                <h1>Snare</h1>
+                <h2>Snare</h2>
                 <button data-track="1" class="mute snare-volume">
                     <i class="fa-solid fa-volume-xmark"></i>
                 </button>
@@ -60,7 +68,7 @@
 
         <div class="hihat-track">
             <div class="controls">
-                <h1>Hihat</h1>
+                <h2>Hihat</h2>
                 <button data-track="1" class="mute hihat-volume">
                     <i class="fa-solid fa-volume-xmark"></i>
                 </button>

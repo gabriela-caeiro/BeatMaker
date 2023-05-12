@@ -69,17 +69,19 @@ background: linear-gradient(90deg, rgb(132, 151, 247) 0%, rgb(243, 129, 152) 100
 }
 .sequencer{
     display: flex;
-    min-height: 100vh;
+    min-height: 90vh;
+    width: 80vw;;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: auto;
 ;
 
 }
 .hihat-track, .snare-track, .kick-track{
     display:flex;
     align-items: center;
-    width: 70%;
+    width: 80%;
     justify-content: space-between;
     margin-top: 5rem;
 
@@ -95,6 +97,7 @@ background: linear-gradient(90deg, rgb(132, 151, 247) 0%, rgb(243, 129, 152) 100
     align-items: center;
     flex: 1;
     margin: 0rem 2rem; 
+    padding-right: 1rem;
 }
 .controls button{
     padding: 1rem;

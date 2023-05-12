@@ -7,10 +7,15 @@
 body{
     font-family: sans-serif;
     background-color: rgb(24, 24, 24);
+  
 }
 
 i,svg{
     pointer-events: none;
+}
+.container{
+    width: 90%;
+    margin: auto;
 }
 header{
     display: flex;
@@ -23,18 +28,24 @@ h1{
     color: white;
     font-family: Roboto, sans-serif;
     font-weight: 300;
+    margin-top: 2rem;
 }
 h2{
     color: white;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    font-family: Roboto, sans-serif;
 }
 .logo{
     width: 20%;
+    margin-top: 2rem;
 }
 .kick-pad, .snare-pad, .hihat-pad{
-    width: 4rem;
-    height: 5rem;
+    width: 3.5rem;
+    height: 4.5rem;
     margin: 1rem 0.5rem;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .kick-pad{
@@ -45,6 +56,7 @@ h2{
 .snare-pad{
     background: rgb(100, 241, 243);
     background: linear-gradient(90deg, rgb(100, 241, 243) 0%, rgb(243, 212, 144) 100%);
+    
 }
 
 .hihat-pad{   
@@ -61,6 +73,7 @@ background: linear-gradient(90deg, rgb(132, 151, 247) 0%, rgb(243, 129, 152) 100
 .snare-pad.active{
     background: rgb(34,193,195);
     background: linear-gradient(90deg, rgb(2, 246, 250) 0%, rgb(252, 172, 0) 100%);
+    border: 1px solid rgb(243, 212, 144);
 }
 
 .hihat-pad.active{
@@ -69,8 +82,6 @@ background: linear-gradient(90deg, rgb(132, 151, 247) 0%, rgb(243, 129, 152) 100
 }
 .sequencer{
     display: flex;
-    min-height: 90vh;
-    width: 80vw;;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -97,6 +108,7 @@ background: linear-gradient(90deg, rgb(132, 151, 247) 0%, rgb(243, 129, 152) 100
     align-items: center;
     flex: 1;
     margin: 0rem 2rem; 
+    
     padding-right: 1rem;
 }
 .controls button{
@@ -108,6 +120,7 @@ background: linear-gradient(90deg, rgb(132, 151, 247) 0%, rgb(243, 129, 152) 100
     cursor: pointer;
     border-radius: 50%;
     transition: all 0.5s ease;
+    
 }
 
 .pad{
@@ -132,14 +145,39 @@ background: linear-gradient(90deg, rgb(132, 151, 247) 0%, rgb(243, 129, 152) 100
 select{
     padding: 1rem;
     font-size: 1rem;
+    
 }
 .mute.active{
     background-color: rgb(139, 139, 139)
 }
 
+.tempo{
+    margin: 3rem;
+    width: 30%;
+    
+}
+
+.tempo-slider{
+    padding: 0.1rem;
+    -webkit-appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.tempo p{
+    color: white;
+    font-size: 1.2rem;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
 @keyframes playTrack{
     from {
         transform: scale(1);
+
     }to{
         transform: scale(1.2);
     }
